@@ -1,5 +1,5 @@
 "use strict";
-
+// stricco mode
 /*
    New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
    Tutorial 11
@@ -33,19 +33,37 @@
       within textStr
 
 */
+// load the init function upon opening the window
+window.onload = init;
+
+function init() {
+
+}
+
+function lightStars() {
+
+}
+
+function turnOffStars() {
+
+}
+
+function updateCount() {
+
+}
+
+function countCharacters(commentText) {
+
+}
 
 
 
-  
 
 
-  
-  
-  
 /*=================================================================*/
 
 function countCharacters(textStr) {
-   var commentregx = /\s/g;
-   var chars = textStr.replace(commentregx, "");
-   return chars.length;
-}   
+      var commentregx = /\s/g;
+      var chars = textStr.replace(commentregx, "");
+      return chars.length;
+}
