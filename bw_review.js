@@ -37,12 +37,34 @@
 window.onload = init;
 
 function init() {
+      //the querySelector is used to target an object collection in the span#stars element
+      var stars = document.querySelectorAll("span#stars img");
+
+      for (var i = 0; i < stars.length; i++) {
+            stars[i].style.cursor = "pointer";
+            document.addEventListener("mouseenter", lightStars);
+      }
+
+      // in response with the keyup event, run the update count
+      document.getElementById("commentField").addEventListener("keyup", updateCount);
 
 }
+
 
 function lightStars() {
+      var starNumber = 5;
 
+      var stars = document.querySelectorAll("span#stars img");
+
+      for (var i = 0; i < starNumber; i++) {
+            stars[i].src = "bw_star2.png";
+      }
+
+      for (var i = starNumber; i < 5; i++) {
+            stars[i].src = "bw_star.png";
+      }
 }
+
 
 function turnOffStars() {
 
