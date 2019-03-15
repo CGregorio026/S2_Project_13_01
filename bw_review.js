@@ -5,8 +5,8 @@
    Tutorial 11
    Case Problem 1
 
-   Author: 
-   Date:   
+   Author: Christian Gregorio
+   Date:   3.14.19
    
    Filename: bw_review.js
 	
@@ -46,13 +46,13 @@ function init() {
       }
 
       // in response with the keyup event, run the update count
-      document.getElementById("commentField").addEventListener("keyup", updateCount);
+      document.getElementById("comment").addEventListener("keyup", updateCount);
 
 }
 
 
-function lightStars() {
-      var starNumber = 5;
+function lightStars(e) {
+      var starNumber = e.target.alt;
 
       var stars = document.querySelectorAll("span#stars img");
 
@@ -63,23 +63,27 @@ function lightStars() {
       for (var i = starNumber; i < 5; i++) {
             stars[i].src = "bw_star.png";
       }
-}
+      document.getElementById("rating") = starNumber + "stars";
 
+      e.target.addEventListener("mouseleave", turnOffStars);
 
-function turnOffStars() {
+      e.target.addEventListener("mouseleave", function () {
 
-}
-
-function updateCount() {
-
-}
-
-function countCharacters(commentText) {
-
+      });
 }
 
 
 
+
+
+
+// function turnOffStars(e) {
+
+// }
+
+// function updateCount() {
+
+// }
 
 
 /*=================================================================*/
